@@ -58,6 +58,10 @@ You can also use the AWS command line utility (`aws`) to do this:
 $ AWS_PROFILE=personal aws lambda update-function-code --function-name my-prefect-lambda --zip-file fileb://prefect-lambda.zip
 ```
 
+### Set the handler pointer
+
+Under "handler" in the lambda web console, set the handler function to `handler.handler`. This will run the `handler` function inside the `handler.py` file. (`main.foo` will run the function `foo()` in `main.py` when the API is called, for another example.)
+
 ### Set the environment variables
 
 You must set `prefectuser` and `prefectpass` in the Environment Variables section of the console.
